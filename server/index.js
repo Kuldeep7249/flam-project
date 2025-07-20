@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/event_calendar');
+mongoose.connect('mongodb+srv://kuldeep304057:tB1jUeHo2AUOVUnq@cluster0.tlcqvzd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
 app.use('/api/events', eventRoutes);
 
