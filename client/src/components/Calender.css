@@ -1,0 +1,85 @@
+/* Calendar container */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  padding: 24px;
+  background-color: #f0f4f8;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Each day box */
+.calendar-day {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 12px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* On hover */
+.calendar-day:hover {
+  background-color: #f9fafb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Today highlight */
+.calendar-day.today {
+  background-color: #dbeafe;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px #3b82f6;
+}
+
+/* Date number */
+.calendar-day .date {
+  font-weight: 600;
+  font-size: 15px;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+/* Event badge */
+.event {
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.2s ease;
+  max-width: 100%;
+}
+
+.event:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive layout: stack days on small screens */
+@media (max-width: 768px) {
+  .calendar {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .calendar {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
