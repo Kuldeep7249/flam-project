@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './EventModel.css'; // Import the CSS file for styling
+import './EventModel.css'; 
 
 const recurrenceOptions = ["None", "Daily", "Weekly", "Monthly"];
 

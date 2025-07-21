@@ -15,7 +15,7 @@ function App() {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/events');
+      const res = await axios.get('https://flam-project-1.onrender.com/api/events');
       setEvents(res.data);
     } catch (err) {
       console.error("Error fetching events", err);
@@ -37,9 +37,9 @@ function App() {
   const saveEvent = async (eventData) => {
     try {
       if (selectedEvent) {
-        await axios.put(`http://localhost:5000/api/events/${selectedEvent._id}`, eventData);
+        await axios.put(`https://flam-project-1.onrender.com/api/events/${selectedEvent._id}`, eventData);
       } else {
-        await axios.post('http://localhost:5000/api/events', eventData);
+        await axios.post('https://flam-project-1.onrender.com/api/events', eventData);
       }
       setModalOpen(false);
       fetchEvents();
@@ -50,7 +50,7 @@ function App() {
 
   const deleteEvent = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/events/${id}`);
+      await axios.delete(`https://flam-project-1.onrender.com/api/events/${id}`);
       setModalOpen(false);
       fetchEvents();
     } catch (err) {

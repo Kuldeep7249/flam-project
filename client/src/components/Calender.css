@@ -12,7 +12,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Each day box */
 .calendar-day {
   background-color: #ffffff;
   border: 1px solid #d1d5db;
@@ -69,7 +68,6 @@
   background-color: #2563eb;
 }
 
-/* Responsive layout: stack days on small screens */
 @media (max-width: 768px) {
   .calendar {
     grid-template-columns: repeat(2, 1fr);
